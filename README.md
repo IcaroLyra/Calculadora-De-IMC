@@ -1,18 +1,52 @@
-## Getting Started
+# Calculadora de IMC em Java 💪
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto simples de uma **Calculadora de IMC (Índice de Massa Corporal)**, feita em Java, ideal para iniciantes.  
+O programa recebe o peso (em kg) e a altura (em centímetros), calcula o IMC e exibe a classificação de acordo com as faixas da OMS.
 
-## Folder Structure
+## 🛠 Tecnologias utilizadas
 
-The workspace contains two folders by default, where:
+- Java (JDK 8 ou superior)
+- Console (entrada e saída via terminal)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🚀 Como usar
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. Compile os arquivos:
+   ```
+   javac Main.java IMCCalculadora.java IMCClassificador.java
+   ```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2. Execute o programa:
+   ```
+   java Main
+   ```
 
-## Dependency Management
+3. Digite os dados solicitados:
+   - **Peso** em quilogramas (ex: `70`)
+   - **Altura** em centímetros (ex: `175`)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O programa vai calcular seu IMC e mostrar a classificação.
+
+## 📊 Faixas de classificação
+
+| IMC                   | Classificação        |
+|-----------------------|----------------------|
+| Menor ou igual a 18.5 | Abaixo do peso       |
+| 18.6 – 24.9           | Peso normal          |
+| 25.0 – 29.9           | Sobrepeso            |
+| 30.0 – 34.9           | Obesidade grau I     |
+| 35.0 – 39.9           | Obesidade grau II    |
+| 40.0 ou mais          | Obesidade grau III   |
+
+## 📁 Estrutura do projeto
+
+```
+.
+├── Main.java
+├── IMCCalculadora.java
+├── IMCClassificador.java
+└── README.md
+```
+
+## ✍️ Autor
+
+Feito com 💻 por [Ícaro Lyra Rangel Tercio]
