@@ -49,4 +49,4 @@ O programa vai calcular seu IMC e mostrar a classificação.
 
 ## ✍️ Autor
 
-Feito com 💻 por [Ícaro Lyra Rangel Tercio]
+Feito com 💻 por Ícaro Lyra Rangel Tercio
