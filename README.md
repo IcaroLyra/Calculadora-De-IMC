@@ -1,52 +1,60 @@
-# Calculadora de IMC em Java 💪
+# 💪 Calculadora de IMC em Java
 
-Este é um projeto simples de uma **Calculadora de IMC (Índice de Massa Corporal)**, feita em Java, ideal para iniciantes.  
-O programa recebe o peso (em kg) e a altura (em centímetros), calcula o IMC e exibe a classificação de acordo com as faixas da OMS.
+Projeto de estudo com entrada e saída pelo terminal. Recebe peso em quilogramas e altura em centímetros, calcula `peso / (alturaEmMetros × alturaEmMetros)` e exibe uma classificação implementada no código.
 
-## 🛠 Tecnologias utilizadas
+## Tecnologias
 
-- Java (JDK 8 ou superior)
-- Console (entrada e saída via terminal)
+- Java: JDK 8 ou superior.
+- `Scanner` para leitura de dados.
+- Classes separadas para entrada, cálculo e classificação.
 
-## 🚀 Como usar
+## Como compilar e executar
 
-1. Compile os arquivos:
-   ```
-   javac Main.java IMCCalculadora.java IMCClassificador.java
-   ```
+Com `javac` e `java` disponíveis, execute na raiz do repositório:
 
-2. Execute o programa:
-   ```
-   java Main
-   ```
-
-3. Digite os dados solicitados:
-   - **Peso** em quilogramas (ex: `70`)
-   - **Altura** em centímetros (ex: `175`)
-
-O programa vai calcular seu IMC e mostrar a classificação.
-
-## 📊 Faixas de classificação
-
-| IMC                   | Classificação        |
-|-----------------------|----------------------|
-| Menor ou igual a 18.5 | Abaixo do peso       |
-| 18.6 – 24.9           | Peso normal          |
-| 25.0 – 29.9           | Sobrepeso            |
-| 30.0 – 34.9           | Obesidade grau I     |
-| 35.0 – 39.9           | Obesidade grau II    |
-| 40.0 ou mais          | Obesidade grau III   |
-
-## 📁 Estrutura do projeto
-
-```
-.
-├── Main.java
-├── IMCCalculadora.java
-├── IMCClassificador.java
-└── README.md
+```sh
+javac -encoding UTF-8 -d out src/*.java
+java -cp out Main
 ```
 
-## ✍️ Autor
+Informe os dados solicitados, por exemplo:
 
-Feito com 💻 por Ícaro Lyra Rangel Tercio
+- Peso: `70` kg.
+- Altura: `175` cm.
+
+O resultado numérico esperado nesse exemplo é aproximadamente `22,86`, com a mensagem `Peso normal`. O separador decimal exibido depende da configuração regional do Java.
+
+## Organização
+
+| Arquivo | Responsabilidade |
+| --- | --- |
+| `src/Main.java` | Entrada dos dados e exibição do resultado |
+| `src/IMCCalculadora.java` | Cálculo do IMC e conversão da altura de centímetros para metros |
+| `src/IMCClassificador.java` | Classificação do valor calculado |
+
+## Regras presentes na implementação
+
+A tabela abaixo descreve o comportamento atual do programa.
+
+| Condição no código | Mensagem |
+| --- | --- |
+| IMC ≤ 18,5 | Abaixo do peso |
+| 18,5 < IMC ≤ 24,9 | Peso normal |
+| 24,9 < IMC ≤ 29,9 | Sobrepeso |
+| 29,9 < IMC ≤ 34,9 | Obesidade grau I |
+| 34,9 < IMC ≤ 39,9 | Obesidade grau II |
+| IMC > 39,9 | Obesidade grau III |
+
+## Limitações e melhorias pendentes
+
+- Não valida peso e altura positivos nem impede altura zero.
+- Entradas não numéricas podem interromper o programa.
+- A leitura de números decimais depende da configuração regional do `Scanner`.
+- Os limites do classificador precisam de revisão e testes de fronteira; a tabela documenta a implementação e não valida critérios clínicos.
+- Não há testes automatizados.
+
+Projeto educacional; não se destina a orientar decisões de saúde.
+
+## Autor
+
+Ícaro Lyra Rangel Tercio.
